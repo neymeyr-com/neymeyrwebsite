@@ -193,6 +193,8 @@ hr {
 .container {
   width: $field-width;
   margin: 0 auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 @include keyframes(fade-in) {
