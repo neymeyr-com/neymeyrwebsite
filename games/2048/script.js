@@ -538,3 +538,7 @@ Tile.prototype.updatePosition = function (position) {
   this.y = position.y;
 };
 
+window.onbeforeunload = function() {
+    return "";
+  }
+
