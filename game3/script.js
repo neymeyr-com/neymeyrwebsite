@@ -14,3 +14,7 @@ function shop() {
     alert('Hallo!')
 
 }
+
+window.onbeforeunload = function() {
+  return "";
+}
