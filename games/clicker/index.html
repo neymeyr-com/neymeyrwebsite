@@ -1,32 +1,54 @@
-<html>
-    <head>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-            rel="stylesheet"
-        />
-        <title>Clicker Idle</title>
-        <link rel="stylesheet" href="main.css" />
-    </head>
-    <body>
-        <div  id="shop">
-ø            <a id="shopbutton" onclick="shop()"
-            ><div id=""shopButtonText>Jetzt holen!</div></a
-            >
+<!DOCTYPE html>
+
+<head>
+    <title>Idle Game by Andreas N.</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="settings">
+            <button id="togglePlay">Toggle Music</button>
+            <button id="help" onclick="window.open('./help.html', 'Help Guide', 'width=600,height=300');">Help</button>
         </div>
+
+        <div class="menus">
+            <div class="main">
+                <button id="chop">Chop Log</button>
+                <button id="visit">Visit Marketplace</button>
+                <button id="mineStone">Mine for Stone</button>
+            </div>
+
+            <div class="marketplace">
+                <div class="sellButtons">
+                    <button id="sell1">Sell [1] log</button>
+                    <button id="sell10">Sell [10] logs</button>
+                    <button id="sellall">Sell all logs</button>
+                </div>
+                
+                <div class="upgrades">
+                    <button id="autoChopper">Buy [1] Auto Chopper ($100)</button>
+                    <button id="autoChopper">Buy [1] Auto Miner ($300)</button>
+                </div>
+
+                <div class="items">
+                    <button id="buyPickaxe">Buy [1] Pickaxe ($50)</button>
+                </div>
+
+                <button id="return">Return</button>
+            </div>
         
-        <div id="content">
-            <p id="counter">0</p>
-            <a id="clicker" onclick="klickMich()">
-            <div id="klickMichText" class="unselectable">Klick mich!</div></a>
+
         </div>
-        <script src="script.js"></script>
-        
-        <!-- <h1>Hey</h1> -->
-        <!-- <button>Test</button> -->
 
-    </body>
+        <div class="inventory">
+            <p id="money">Money: $0</p> 
+            <p id="logs">You own 0 logs.</p>   
+            <p id="pickaxes"></p>
+            <p id="stone"></p>
 
-</html>
-
-
- 
+        </div>
+    </div>
+</body> 
