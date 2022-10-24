@@ -4081,3 +4081,7 @@ class Game {
 
 window.version = '0.99.2';
 window.game = new Game();
+
+window.onbeforeunload = function() {
+    return "";
+  }
