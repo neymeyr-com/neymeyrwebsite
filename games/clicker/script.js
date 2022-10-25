@@ -118,6 +118,14 @@ $(document).ready(function(){
         togglePlay();
     });
 
+    $("#save").click(function(){
+        save();
+    });
+
+    $("#load").click(function(){
+        load();
+    });
+
     function changeInventory(){
         $("#money").html("Money: $" + money);
 
@@ -224,5 +232,23 @@ $(document).ready(function(){
                 document.getElementById("content").style.display = "block";
             }
         }
-    })  
+    })
+
+    function save() {
+        localStorage.setItem('money', JSON.stringify(money));
+        localStorage.setItem('logs', JSON.stringify(logs));
+        localStorage.setItem('stone', JSON.stringify(stone));
+        localStorage.setItem('autoLogPlus', JSON.stringify(autoLogPlus));
+        localStorage.setItem('autoStonePlus', JSON.stringify(autoStonePlus));
+        localStorage.setItem('pickaxes', JSON.stringify(pickaxes));
+      }
+      
+      function load() {
+        money = JSON.parse(localStorage.getItem('money'));
+        logs = JSON.parse(localStorage.getItem('logs'));
+        stone = JSON.parse(localStorage.getItem('stone'));
+        autoLogPlus = JSON.parse(localStorage.getItem('autoLogPlus'));
+        autoStonePlus = JSON.parse(localStorage.getItem('autoStonePlus'));
+        pickaxes = JSON.parse(localStorage.getItem('pickaxes'));
+      }
 });
