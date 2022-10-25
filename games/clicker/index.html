@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div class="content">
+    <div class="content" id="content">
         <div class="settings">
             <button id="togglePlay">Toggle Music</button>
             <button id="help" onclick="window.open('./help.html', 'Help Guide', 'width=600,height=300');">Help</button>
@@ -36,11 +36,11 @@
                 
                 <div class="upgrades">
                     <button id="autoChopper">Buy [1] Auto Chopper ($100)</button>
-					<button id="autoMiner">Buy [1] Auto Miner ($300)</button>
+					<button id="autoMiner">Buy [1] Auto Miner ($20000)</button>
                 </div>
 
                 <div class="items">
-                    <button id="buyPickaxe">Buy [1] Pickaxe ($50)</button>
+                    <button id="buyPickaxe">Buy [1] Pickaxe ($5000)</button>
                 </div>
 
                 <button id="return">Return</button>
@@ -54,6 +54,7 @@
             <p id="logs">You own 0 logs.</p>   
             <p id="pickaxes"></p>
             <p id="stone"></p>
+            <p id="autoLogPlus"></p>
 
         </div>
     </div>

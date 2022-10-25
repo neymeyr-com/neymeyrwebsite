@@ -4,9 +4,12 @@
     width: 100%;
 }
 
+.main{
+    margin-top: 30px;
+}
+
 .settings{
-    margin-top: 10px;
-    margin-bottom: 30px;
+    float: right;
 }
 
 .marketplace{
@@ -19,12 +22,28 @@
     margin-bottom: 10px;
 }
 
+.sellButtons button{
+    background-color: rgba(214, 210, 147, 0.333);
+    display: grid;
+    grid-template-columns: repeat(3, 72px);
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
 .sellstoneButtons{
     display: grid;
     grid-template-columns: repeat(3, 72px);
     margin-bottom: 10px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.sellstoneButtons button{
+    background-color: rgba(27, 27, 27, 0.267);
+    display: grid;
+    grid-template-columns: repeat(3, 72px);
+    margin-bottom: 10px;
+	margin-left: 5px;
 }
 
 .upgrades, .items button{
@@ -36,4 +55,12 @@
 button{
     background-color: white;
     font-size: 18px;
+}
+
+.credits{
+    color: rgb(107, 106, 106);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
 }

@@ -1,15 +1,15 @@
 $(document).ready(function(){
-    var logs = 100;
-    var stone = 20;
-    var pickaxes = 1;
+    var logs = 0;
+    var stone = 0;
+    var pickaxes = 0;
     var money = 0;
     var logPlus = 1;
     var stonePlus = 1;
     var autoLogPlus = 0;
 	var autoStonePlus = 0;
     var autoChopperPrice = 100;
-	var autoMinerPrice = 300;
-    var pickaxePrice = 50;
+	var autoMinerPrice = 20000;
+    var pickaxePrice = 5000;
     var logPrice = 1;
 	var stonePrice = 3;
     var menu;
@@ -37,7 +37,7 @@ $(document).ready(function(){
         if(pickaxes == 0){
             alert("You have nothing to mine Stone with!")
         }else{
-            stone += stonePlus * pickaxe;
+            stone += stonePlus * pickaxes;
             changeInventory();
         }
     });
@@ -140,9 +140,9 @@ $(document).ready(function(){
         }
 		
 		if(autoLogPlus > 0){
-            $("#autoChopper").html("You now own " + autoLogPlus + " Auto Choppers.");
+            $("#autoLogPlus").html("You now own " + autoLogPlus + " Auto Choppers.");
         }else{
-            $("#autoChopper").html("");
+            $("#autoLogPlus").html("");
         }
     }
 
@@ -213,4 +213,16 @@ $(document).ready(function(){
       audio.onpause = function() {
         isPlaying = false;
       };
+
+    document.addEventListener("keydown", function(){
+        var x=event.keyCode || event.which;
+        if(x==72){
+            var y = document.getElementById("content");
+            if (y.style.display === "block"){
+                document.getElementById("content").style.display = "none";
+            }else{
+                document.getElementById("content").style.display = "block";
+            }
+        }
+    })  
 });
