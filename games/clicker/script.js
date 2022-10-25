@@ -1,24 +1,32 @@
 $(document).ready(function(){
-    var logs = 0;
-    var stone = 0;
-    var pickaxes = 0;
+    var logs = 100;
+    var stone = 20;
+    var pickaxes = 1;
     var money = 0;
     var logPlus = 1;
     var stonePlus = 1;
     var autoLogPlus = 0;
+	var autoStonePlus = 0;
     var autoChopperPrice = 100;
+	var autoMinerPrice = 300;
     var pickaxePrice = 50;
     var logPrice = 1;
+	var stonePrice = 3;
     var menu;
     var audio = new Audio('./Musik.mp3');
     var isPlaying = false;
 
     setInterval(function(){
         logs += autoLogPlus;
+		stone += autoStonePlus;
         changeInventory();
         changeMarket();
     }, 1000);
+	
+	
+	
 
+	
     $("#chop").click(function(){
         logs += logPlus;
         changeInventory();
@@ -29,7 +37,7 @@ $(document).ready(function(){
         if(pickaxes == 0){
             alert("You have nothing to mine Stone with!")
         }else{
-            stone += stonePlus;
+            stone += stonePlus * pickaxe;
             changeInventory();
         }
     });
@@ -54,10 +62,38 @@ $(document).ready(function(){
         changeInventory();
         changeMarket();
     });
+	
+	$("#sellstone1").click(function(){
+        stone --;
+        money += stonePrice;
+        changeInventory();
+        changeMarket();
+    });
+
+    $("#sellstone10").click(function(){
+        stone -= 10;
+        money += stonePrice * 10;
+        changeInventory();
+        changeMarket();
+    });
+
+    $("#sellstoneall").click(function(){
+        money += stonePrice * stone;
+        stone = 0;
+        changeInventory();
+        changeMarket();
+    });
 
     $("#autoChopper").click(function(){
         money -= autoChopperPrice;
         autoLogPlus++;
+        changeInventory();
+        changeMarket();
+    });
+	
+	$("#autoMiner").click(function(){
+        money -= autoMinerPrice;
+        autoStonePlus++;
         changeInventory();
         changeMarket();
     });
@@ -102,6 +138,12 @@ $(document).ready(function(){
         }else{
             $("#pickaxes").html("");
         }
+		
+		if(autoLogPlus > 0){
+            $("#autoChopper").html("You now own " + autoLogPlus + " Auto Choppers.");
+        }else{
+            $("#autoChopper").html("");
+        }
     }
 
     function changeMarket(){
@@ -120,6 +162,22 @@ $(document).ready(function(){
         }else{
             $("#sell10").css("display", "none");
         }
+		
+		if(stone > 0){
+            $("#sellstoneall").css("display", "block");
+        }else{
+            $("#sellstoneall").css("display", "none");
+        }
+        if(stone >= 1){
+            $("#sellstone1").css("display", "block");
+        }else{
+            $("#sellstone1").css("display", "none");
+        }
+        if(stone >= 10){
+            $("#sellstone10").css("display", "block");
+        }else{
+            $("#sellstone10").css("display", "none");
+        }
 
         if(money >= autoChopperPrice){
             $("#autoChopper").css("display", "block");
@@ -130,6 +188,12 @@ $(document).ready(function(){
             $("#buyPickaxe").css("display", "block");
         }else{
             $("#buyPickaxe").css("display", "none");
+        }
+		
+		if(money >= autoMinerPrice){
+            $("#autoMiner").css("display", "block");
+        }else{
+            $("#autoMiner").css("display", "none");
         }
     }
 
@@ -145,7 +209,6 @@ $(document).ready(function(){
       
       audio.onplaying = function() {
         isPlaying = true;
-        alert("Make sure audio playback is enabled for this website!")
       };
       audio.onpause = function() {
         isPlaying = false;

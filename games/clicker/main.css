@@ -19,6 +19,14 @@
     margin-bottom: 10px;
 }
 
+.sellstoneButtons{
+    display: grid;
+    grid-template-columns: repeat(3, 72px);
+    margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .upgrades, .items button{
     display: grid;
     grid-template-columns: repeat(3, 96px);
