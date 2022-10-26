@@ -36,6 +36,7 @@
   border-left-width: 0px;
   border-right-width: 0px;
   border-bottom-width: 0px;
+  margin-bottom: 20px;
 }
 .neues-feature-cta-btn:hover {
   background-color: #2c1db3;
