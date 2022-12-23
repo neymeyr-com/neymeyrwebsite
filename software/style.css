@@ -1,0 +1,122 @@
+body {
+    font-family: sans-serif;
+    color: white;
+    background-color: #1c768f; /* Change the background color to yellow */
+}
+  
+header {
+    background-color: #032539; /* Change the header background color to a lighter shade of yellow */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+  
+h1 {
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px;
+    color: #fbf3f2; /* Change the heading color to a lighter shade of yellow */
+  }
+  
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: calc(100vh - 80px);
+}
+  
+.app-container {
+    position: relative;
+}
+  
+.app-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 490px;
+    background-color: #032539; /* Change the app panel background color to a lighter shade of yellow */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+.app-logo {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 20%;
+}
+      
+.app-panel h2 {
+    text-align: center;
+    margin: 20px;
+}
+      
+.app-panel p {
+    text-align: center;
+    margin: 20px;
+}
+      
+.download-button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Add a transition to animate the button when the mouse is hovered over it */
+}
+  
+.download-button:hover {
+    background-color: #444;
+    box-shadow: 0 0 10px white; /* Add a white box-shadow to create a glowing effect */
+}
+
+.download-button-mac {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Add a transition to animate the button when the mouse is hovered over it */
+}
+  
+  .download-button-mac:hover {
+    background-color: #444;
+    box-shadow: 0 0 10px white; /* Add a white box-shadow to create a glowing effect */
+}
+      
+.app-panel:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .app-container {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .app-panel {
+      position: static; /* Change the position of the app panel to static */
+      width: 100%; /* Set the width of the app panel to 100% */
+      transform: none; /* Remove the transform property */
+    }
+  }
