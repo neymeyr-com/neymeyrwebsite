@@ -1,11 +1,11 @@
 body {
     font-family: sans-serif;
     color: white;
-    background-color: #1c768f; /* Change the background color to yellow */
+    background-color: #1c768f;
 }
   
 header {
-    background-color: #032539; /* Change the header background color to a lighter shade of yellow */
+    background-color: #032539;
     color: white;
     padding: 20px;
     text-align: center;
@@ -19,7 +19,7 @@ h1 {
 h2 {
     text-align: center;
     margin: 20px;
-    color: #fbf3f2; /* Change the heading color to a lighter shade of yellow */
+    color: #fbf3f2;
   }
   
 main {
@@ -40,7 +40,7 @@ main {
     transform: translate(-50%, -50%);
     width: 400px;
     height: 490px;
-    background-color: #032539; /* Change the app panel background color to a lighter shade of yellow */
+    background-color: #032539;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     overflow: hidden;
@@ -116,8 +116,8 @@ main {
     }
   
     .app-panel {
-      position: static; /* Change the position of the app panel to static */
-      width: 100%; /* Set the width of the app panel to 100% */
-      transform: none; /* Remove the transform property */
+      position: static;
+      width: 100%;
+      transform: none;
     }
   }
