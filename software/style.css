@@ -39,7 +39,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
-    height: 490px;
+    height: 512px;
     background-color: #032539;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -107,6 +107,15 @@ main {
 .app-panel:hover {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     transform: translate(-50%, -50%) scale(1.1);
+}
+
+.link {
+    text-align: center;
+    color: #fbf3f28f;
+}
+
+.link:hover {
+    color: white;
 }
 
 @media (max-width: 600px) {
